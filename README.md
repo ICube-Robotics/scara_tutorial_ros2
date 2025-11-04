@@ -47,4 +47,4 @@ This tutorial is partially inspired from [pac48](https://github.com/pac48/ros2_c
 
 [ICube Laboratory](https://icube.unistra.fr), [University of Strasbourg](https://www.unistra.fr/), France
 
-__Maciej Bednarczyk:__ [m.bednarczyk@unistra.fr](mailto:m.bednarczyk@unistra.fr), @github: [mcbed](mailto:macbednarczyk@gmail.com)
+__Maciej Bednarczyk:__ [mcbed.robotics@gmail.com](mailto:mcbed.robotics@gmail.com), @github: [mcbed](https://github.com/mcbed)
