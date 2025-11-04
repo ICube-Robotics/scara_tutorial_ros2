@@ -36,9 +36,7 @@ jobs:
           pip install -r docs/requirements.txt
 
       - name: Build documentation
-        run: |
-          cd docs
-          mkdocs build
+         run: mkdocs build --config-file docs/mkdocs.yml
 
       - name: Create commit
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
