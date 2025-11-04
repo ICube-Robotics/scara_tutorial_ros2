@@ -11,14 +11,14 @@ This tutorial is made to understand the basic concepts of controlling a robot us
 ![scara model](resources/scara_model.png)
 
 ## Getting Started
-***Required setup : Ubuntu 22.04 LTS and ROS2 Humble***
+***Required setup : Ubuntu 24.04 LTS and ROS2 Jazzy***
 
-1.  Install `ros2` packages. The current development is based of `ros2 humble`. Installation steps are described [here](https://docs.ros.org/en/humble/Installation.html).
+1.  Install `ros2` packages. The current development is based on `ros2 jazzy`. Installation steps are described [here](https://docs.ros.org/en/jazzy/Installation.html).
 2. Source your `ros2` environment:
     ```shell
-    source /opt/ros/humble/setup.bash
+    source /opt/ros/jazzy/setup.bash
     ```
-    **NOTE**: The ros2 environment needs to be sources in every used terminal. If only one distribution of ros2 is used, it can be added to the `~/.bashrc` file.
+    **NOTE**: The ros2 environment needs to be sourced in every used terminal. If only one distribution of ros2 is used, it can be added to the `~/.bashrc` file.
 3. Install `colcon` and its extensions :
     ```shell
     sudo apt install python3-colcon-common-extensions
@@ -35,6 +35,9 @@ This tutorial is made to understand the basic concepts of controlling a robot us
     colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --symlink-install
     source install/setup.bash
     ```
+
+## Docker Setup (Alternative)
+For a containerized setup, see the [Docker README](.docker/README.md) for instructions on building and running the tutorial in a Docker container with ROS2 Jazzy.
 
 ## Acknowledgments 
 This tutorial is partially inspired from [pac48](https://github.com/pac48/ros2_control_demos/tree/full-example-tutorial)'s tutorial and the official [ros2_control website](https://control.ros.org).
