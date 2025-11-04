@@ -5,6 +5,10 @@ on:
   # Triggers the workflow on push events but only for the main branch
   push:
     branches: [ main ]
+  
+  # Triggers the workflow on pull request events
+  pull_request:
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,6 +40,7 @@ jobs:
           mkdocs build
 
       - name: Create commit
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           git clone https://github.com/ICube-Robotics/ecat_ros2_workshop.git --branch gh-pages --single-branch gh-pages
           cp -r site/* gh-pages/
@@ -46,6 +51,7 @@ jobs:
           git commit -m "Update documentation" -a || true
 
       - name: Push changes
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: ad-m/github-push-action@master
         with:
           branch: gh-pages
