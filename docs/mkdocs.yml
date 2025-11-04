@@ -3,6 +3,7 @@ site_description: Tutorial for controlling robots using ros2_control and EtherCA
 site_author: ICube Laboratory & Asterion Robotics
 site_url: https://ICube-Robotics.github.io/ecat_ros2_workshop
 docs_dir: .
+site_dir: ../site
 
 repo_name: ICube-Robotics/ecat_ros2_workshop
 repo_url: https://github.com/ICube-Robotics/ecat_ros2_workshop
