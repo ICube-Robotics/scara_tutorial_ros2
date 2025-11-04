@@ -1,0 +1,94 @@
+site_name: SCARA ROS2 EtherCAT Workshop
+site_description: Tutorial for controlling robots using ros2_control and EtherCAT
+site_author: ICube Laboratory & Asterion Robotics
+site_url: https://ICube-Robotics.github.io/ecat_ros2_workshop
+
+repo_name: ICube-Robotics/ecat_ros2_workshop
+repo_url: https://github.com/ICube-Robotics/ecat_ros2_workshop
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - toc.follow
+  language: en
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+  - glightbox
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - admonition
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ICube-Robotics
+    - icon: fontawesome/solid/globe
+      link: https://icube.unistra.fr
+  generator: false
+
+copyright: Copyright &copy; 2025 ICube Laboratory & Asterion Robotics
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Docker Setup: getting-started/docker.md
+  - Tutorials:
+    - ros2_control Overview: tutorials/r2c_overview.md
+    - URDF Description: tutorials/urdf_tutorial.md
+    - Launch & Interaction: tutorials/launch_tutorial.md
+    - Hardware Interface: tutorials/hardware_tutorial.md
+    - Controller Development: tutorials/controller_tutorial.md
+    - Gazebo Simulation: tutorials/gazebo_tutorial.md
+    - EtherCAT Integration: tutorials/ethercat_tutorial.md
+  - About:
+    - Contacts: about/contacts.md

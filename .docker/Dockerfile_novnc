@@ -1,5 +1,5 @@
 ARG ROS_DISTRO="jazzy"
-FROM scara_tutorial_ros2:${ROS_DISTRO}
+FROM ecat_ros2_workshop:${ROS_DISTRO}
 
 RUN apt update
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
