@@ -1,0 +1,23 @@
+ARG ROS_DISTRO="jazzy"
+FROM scara_tutorial_ros2:${ROS_DISTRO}
+
+RUN apt update
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -qqy \
+    dbus-x11 \
+    mesa-utils \
+    net-tools \
+    novnc \
+    onboard \
+    tigervnc-standalone-server \
+    tigervnc-xorg-extension \
+    x11-apps \
+    xfce4 \
+ && rm -rf /var/lib/apt/lists/* \
+ && mkdir ~/.vnc \
+ && echo "#!/bin/sh\nstartxfce4" > ~/.vnc/xstartup \
+ && chmod +x ~/.vnc/xstartup
+
+COPY .docker/ros_entrypoint_novnc.sh /ros_entrypoint.sh
+RUN chmod +x /ros_entrypoint.sh
+ENTRYPOINT ["/ros_entrypoint.sh"]
+CMD ["bash"]

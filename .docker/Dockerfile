@@ -10,6 +10,6 @@ RUN cd ros2_dev && \
     rosdep install --ignore-src --from-paths . -y -r && \
     colcon build --symlink-install
 COPY .docker/ros_entrypoint.sh /ros_entrypoint.sh
-RUN chmod 755 /ros_entrypoint.sh
+RUN chmod +x /ros_entrypoint.sh
 ENTRYPOINT ["/ros_entrypoint.sh"]
 CMD ["bash"]
